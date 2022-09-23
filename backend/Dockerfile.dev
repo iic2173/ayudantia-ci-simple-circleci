@@ -1,0 +1,18 @@
+###########
+# DEVELOP #
+###########
+
+FROM node:18.9.0-alpine3.16
+
+# Create app directory
+WORKDIR /usr/src/app
+
+# Install app dependencies
+COPY package*.json ./
+RUN npm install
+
+# Bundle app source
+COPY . .
+
+# Command to run when the container is ready
+CMD [ "npm", "run", "start:dev"]
