@@ -4,7 +4,7 @@ import { strict as assert } from 'node:assert';
 
 test('top level test', async (t) => {
   await t.test('subtest 1', (t) => {
-    assert.strictEqual(1, 1);
+    assert.strictEqual(1, 2);
   });
 
   await t.test('subtest 2', (t) => {
